@@ -23,6 +23,24 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.nameAniMain {
+  z-index: 999;
+  height: 100px;
+  overflow: hidden;
+}
+.nameAniMain .flipAnim {
+  height: 100%;
+}
+.nameAniMain .flipAnim:nth-child(1) {
+  animation: anim 3s ease-in-out 250ms infinite alternate-reverse;
+}
+@keyframes anim {
+  to{
+    margin-top: -50px;
+  }from{
+    margin-top: 10px;
+  }
+}
 
 .App-link {
   color: #61dafb;

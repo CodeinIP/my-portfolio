@@ -2,6 +2,7 @@ import {
   Box,
   Button,
   Circle,
+  Heading,
   Image,
   Stack,
   Text,
@@ -9,7 +10,8 @@ import {
   useColorMode,
   useMediaQuery,
 } from "@chakra-ui/react";
-import React, { Profiler } from "react";
+import "../App.css";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import profile from "../components/images/Profilee.png";
 import Projects from "./pages/Projects";
@@ -31,7 +33,7 @@ const Home = () => {
       style={{
         height: "100%",
         width: "100%",
-        scrollSnapType:"y",
+        scrollSnapType: "y",
         overflowY: "scroll",
       }}
     >
@@ -41,7 +43,7 @@ const Home = () => {
           justifyContent: "center",
           // height: "100vh",
           width: "100vw",
-          scrollSnapAlign:"center",
+          scrollSnapAlign: "center",
           fontSize: "40px",
           border: "1px solid white",
           alignItems: "center",
@@ -75,14 +77,21 @@ const Home = () => {
             <Text fontSize="5xl" fontWeight="semibold">
               HI ,I am
             </Text>
-            <Text
-              fontSize="7xl"
-              fontWeight="bold"
-              bgGradient="linear(to-r,cyan.400,blue.500,purple.600)"
-              bgClip="text"
-            >
-              Inder Pal
-            </Text>
+            <div className="nameAniMain" >
+              <div className="nameAni flipAnim ">
+                <Text
+                  fontSize="7xl"
+                  fontWeight="bold"
+                  bgGradient="linear(to-r,cyan.400,blue.500,purple.600)"
+                  bgClip="text"
+                >
+                  Inder Pal
+                </Text>
+              </div>
+              <div className="profAni flipAnim " >
+                <Heading>Full Stack Web Developer</Heading>
+              </div>
+            </div>
             <Text color={isDark ? "gray.200" : "gray.500"}></Text>
             <Button
               mt={8}
@@ -113,7 +122,7 @@ const Home = () => {
           justifyContent: "center",
           height: "100vh",
           width: "100vw",
-          scrollSnapAlign:"center",
+          scrollSnapAlign: "center",
           fontSize: "40px",
           border: "1px solid white",
           alignItems: "center",
@@ -127,7 +136,7 @@ const Home = () => {
           justifyContent: "center",
           height: "100vh",
           width: "100vw",
-          scrollSnapAlign:"center",
+          scrollSnapAlign: "center",
           fontSize: "40px",
           border: "1px solid white",
           alignItems: "center",
@@ -141,7 +150,7 @@ const Home = () => {
           justifyContent: "center",
           height: "100vh",
           width: "100vw",
-          scrollSnapAlign:"center",
+          scrollSnapAlign: "center",
           fontSize: "40px",
           border: "1px solid white",
           alignItems: "center",
