@@ -10,6 +10,7 @@ import {
   useColorMode,
   useMediaQuery,
 } from "@chakra-ui/react";
+import Snowfall from "react-snowfall";
 import "../App.css";
 import React from "react";
 import { useNavigate } from "react-router-dom";
@@ -30,6 +31,11 @@ const Home = () => {
   });
   return (
     <div className="scrollSnapMain">
+      <Snowfall
+        snowflakeCount={10}
+        radius={[0.5, 1.0]}
+        color="#f5f5f5"
+      />
       <div className="scrollSnapChild">
         <Circle
           position="absolute"

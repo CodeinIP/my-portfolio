@@ -15,7 +15,7 @@
   scroll-snap-align: center;
   height: 100vh;
   width: 100vw;
-  border:1px solid white
+  /* border:1px solid white */
 }
 .App-header {
   background-color: #282c34;
