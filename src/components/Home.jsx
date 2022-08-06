@@ -29,26 +29,8 @@ const Home = () => {
     xl: "row",
   });
   return (
-    <div
-      style={{
-        height: "100%",
-        width: "100%",
-        scrollSnapType: "y",
-        overflowY: "scroll",
-      }}
-    >
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          // height: "100vh",
-          width: "100vw",
-          scrollSnapAlign: "center",
-          fontSize: "40px",
-          border: "1px solid white",
-          alignItems: "center",
-        }}
-      >
+    <div className="scrollSnapMain">
+      <div className="scrollSnapChild">
         <Circle
           position="absolute"
           left="100px"
@@ -77,7 +59,7 @@ const Home = () => {
             <Text fontSize="5xl" fontWeight="semibold">
               HI ,I am
             </Text>
-            <div className="nameAniMain" >
+            <div className="nameAniMain">
               <div className="nameAni flipAnim ">
                 <Text
                   fontSize="7xl"
@@ -88,7 +70,7 @@ const Home = () => {
                   Inder Pal
                 </Text>
               </div>
-              <div className="profAni flipAnim " >
+              <div className="profAni flipAnim ">
                 <Heading>Full Stack Web Developer</Heading>
               </div>
             </div>
@@ -116,46 +98,13 @@ const Home = () => {
           </Box>
         </Box>
       </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          height: "100vh",
-          width: "100vw",
-          scrollSnapAlign: "center",
-          fontSize: "40px",
-          border: "1px solid white",
-          alignItems: "center",
-        }}
-      >
+      <div className="scrollSnapChild">
         <Skills />
       </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          height: "100vh",
-          width: "100vw",
-          scrollSnapAlign: "center",
-          fontSize: "40px",
-          border: "1px solid white",
-          alignItems: "center",
-        }}
-      >
+      <div className="scrollSnapChild">
         <Projects />
       </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          height: "100vh",
-          width: "100vw",
-          scrollSnapAlign: "center",
-          fontSize: "40px",
-          border: "1px solid white",
-          alignItems: "center",
-        }}
-      >
+      <div className="scrollSnapChild">
         <Profile />
       </div>
     </div>
