@@ -15,9 +15,6 @@ import "../App.css";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import profile from "../components/images/Profilee.png";
-import Projects from "./pages/Projects";
-import Skills from "./pages/Skills";
-import Profile from "./Profile";
 const Home = () => {
   const { colorMode } = useColorMode();
   const isDark = colorMode === "dark";
@@ -30,13 +27,9 @@ const Home = () => {
     xl: "row",
   });
   return (
-    <div className="scrollSnapMain">
-      <Snowfall
-        snowflakeCount={10}
-        radius={[0.5, 1.0]}
-        color="#f5f5f5"
-      />
-      <div className="scrollSnapChild">
+    <div id="homePage">
+      <Snowfall snowflakeCount={10} radius={[0.5, 1.0]} color="#f5f5f5" />
+      <div>
         <Circle
           position="absolute"
           left="100px"
@@ -103,15 +96,6 @@ const Home = () => {
             />
           </Box>
         </Box>
-      </div>
-      <div className="scrollSnapChild">
-        <Skills />
-      </div>
-      <div className="scrollSnapChild">
-        <Projects />
-      </div>
-      <div className="scrollSnapChild">
-        <Profile />
       </div>
     </div>
   );
