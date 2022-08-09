@@ -1,14 +1,26 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
-import Home from "../Home";
+import ContactMe from "../ContactMe";
 
-import Resume from "../Resume";
+import Home from "../Home";
+import Projects from "../pages/Projects";
+import Skills from "../pages/Skills";
+
 const Allroutes = () => {
   return (
-    <Routes>
-        <Route path="/"  element={<Home/>} />
-      <Route path="/resume" element={<Resume />} />
-    </Routes>
+    <>
+      <div>
+        <Home />
+      </div>
+      <div className="scrollSnapChild">
+        <Skills />
+      </div>
+      <div className="scrollSnapChild">
+        <Projects />
+      </div>
+      <div className="scrollSnapChild">
+        <ContactMe />
+      </div>
+    </>
   );
 };
 

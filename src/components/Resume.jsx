@@ -8,7 +8,7 @@ const Resume = () => {
       <Box display="flex" justifyContent="space-evenly" m="5" >
       <Link to="/" ><Button variant="solid" colorScheme="teal" >Go Back</Button></Link>
         <Button variant="outline" >
-            <Link to="files/resume.pdf" target="_black"  download >Download PDF</Link>
+            <Link to="/files/resume.pdf" target="_blank"  download >Download PDF</Link>
         </Button>
       </Box>
       <Box>
