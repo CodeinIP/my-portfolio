@@ -13,14 +13,13 @@ const ContactMe = () => {
   const [form, setForm] = useState({
     name: "",
     email: "",
-    // mobile: "",
     subject: "",
     message: "",
   });
   const [status, setStatus] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-const toast = useToast();
+  const toast = useToast();
   const sendEmail = (e) => {
     e.preventDefault();
     setLoading(true);
@@ -31,6 +30,7 @@ const toast = useToast();
           console.log("SUCCESS!", response.status, response.text);
           setLoading(false);
           setStatus(true);
+          setForm({ name: "", email: "", subject: "", message: "" });
           toast({
             title: "Email send successful.",
             status: "success",
