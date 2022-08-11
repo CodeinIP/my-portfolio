@@ -13,7 +13,7 @@
   align-items: center;
   font-size: 40px;
   scroll-snap-align: center;
-  height: 100vh;
+  height: 140vh;
   width: 100vw;
   /* border:1px solid white */
 }
@@ -23,23 +23,30 @@
   align-items: center;
   height: 100vh;
   width: 100vw;
-  border: 1px solid green;
   position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10%;
+  padding: 2rem;
 }
-/* .skillsPage .skillsSlider {
-  position: absolute;
-  width: 300%;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  animation: slider 10s infinite linear;
-} */
-
-/* .slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-} */
+.skillsPage div {
+  border: 3px solid gray;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  font-size: 80px;
+  color: black;
+  border-radius: 1rem;
+  margin: auto;
+}
+.skillsPage div:hover {
+  transition: 3s ease-in-out;
+  transform: rotate(360deg);
+  transform-style: preserve-3d;
+}
 @keyframes slider {
   0%,
   25%,
@@ -79,7 +86,7 @@
   position: relative;
   width: 100%;
   max-width: 400px;
-  border:1px  solid white;
+  border: 1px solid white;
 }
 
 /* .image {
@@ -100,16 +107,16 @@
   transition: 0.3s ease;
   background-color: red;
 }
-.contactForm{
-height: 100vh;
-width: 100vw;
-margin: auto;
-text-align: center;
+.contactForm {
+  height: 100vh;
+  width: 100vw;
+  margin: auto;
+  text-align: center;
 }
-.contactForm form{
+.contactForm form {
   width: 400px;
   margin: auto;
-  border:3px solid rgb(116, 115, 115);
+  border: 3px solid rgb(116, 115, 115);
   padding: 1rem;
   box-sizing: border-box;
   border-radius: 1rem;

@@ -24,6 +24,7 @@ function Navbar() {
     <HStack
       p="0.5rem 1rem"
       position="sticky"
+      zIndex="10"
       top="0"
       background="gray"
       mb="1rem"
