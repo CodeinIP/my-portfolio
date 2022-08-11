@@ -8,22 +8,22 @@ const Skills = () => {
   return (
     <div id="skillsPage" className="skillsPage">
       <div>
-        <AiFillHtml5 />
+        <AiFillHtml5 color="orange"  />
       </div>
       <div>
-        <DiCss3 />
+        <DiCss3 color="lightblue" />
       </div>
       <div>
-        <DiJavascript1 />
+        <DiJavascript1 color="orangered" />
       </div>
       <div>
-        <DiReact />
+        <DiReact color="skyblue" />
       </div>
       <div>
-        <SiRedux />
+        <SiRedux color="#764abc" />
       </div>
       <div>
-        <SiChakraui />
+        <SiChakraui color="#6fcad0" />
       </div>
     </div>
   );
