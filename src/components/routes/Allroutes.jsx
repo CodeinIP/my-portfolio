@@ -1,14 +1,18 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
-import Home from "../Home";
+import ContactMe from "../ContactMe";
 
-import Resume from "../Resume";
+import Home from "../Home";
+import Projects from "../pages/Projects";
+import Skills from "../pages/Skills";
+
 const Allroutes = () => {
   return (
-    <Routes>
-        <Route path="/"  element={<Home/>} />
-      <Route path="/resume" element={<Resume />} />
-    </Routes>
+    <>
+      <Home />
+      <Skills />
+      <Projects />
+      <ContactMe />
+    </>
   );
 };
 

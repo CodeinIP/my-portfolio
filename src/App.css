@@ -1,32 +1,61 @@
 .App {
   text-align: center;
 }
-.scrollSnapMain{
-  height: 100%;
-  width: 100%;
-  overflow: scroll;
-  scroll-snap-type: y mandatory;
-}
-.scrollSnapChild{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 40px;
-  scroll-snap-align: center;
+.skillsPage {
   height: 100vh;
-  width: 100vw;
-  border:1px solid white
+  /* background-color: whitesmoke; */
+  overflow: auto;
 }
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.skillsPage .insideSkills {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 80vw;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10%;
+  padding: 2rem;
+  /* border:1px solid; */
+  margin: 1rem auto;
+}
+
+.skillsPage .insideSkills div {
+  border: 3px solid gray;
+  display: flex;
+  max-height: 60px;
+  max-width: 60px;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: white;
+  font-size: 50px;
+  color: black;
+  border-radius: 1rem;
+  margin: auto;
 }
+.skillsPage .insideSkills div:hover {
+  transition: 3s ease-in-out;
+  transform: rotate(360deg);
+  transform-style: preserve-3d;
+}
+@keyframes slider {
+  0%,
+  25%,
+  100% {
+    left: 0;
+  }
+  30%,
+  55% {
+    left: -100%;
+  }
+  60%,
+  85% {
+    left: -200%;
+  }
+}
+
 .nameAniMain {
   z-index: 999;
   height: 100px;
@@ -39,22 +68,102 @@
   animation: anim 3s ease-in-out 250ms infinite alternate-reverse;
 }
 @keyframes anim {
-  to{
+  to {
     margin-top: -50px;
-  }from{
+  }
+  from {
     margin-top: 10px;
   }
 }
 
-.App-link {
-  color: #61dafb;
+.contactForm {
+  height: 100vh;
+  width: 100vw;
+  margin: auto;
+  text-align: center;
+}
+.contactForm form {
+  width: 400px;
+  margin: auto;
+  border: 3px solid rgb(116, 115, 115);
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 1rem;
+}
+/* //========== */
+.projectsPage {
+  overflow: hidden;
+}
+.projectsPage .main {
+  margin: auto;
+  width: 70%;
+}
+.projectsPage .carousals {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.projectsPage .projectDescription {
+  margin: 1rem;
+  text-align: center;
+}
+.projectDescription .techStack {
+  display: flex;
+  font-size: 2rem;
+  margin: 2rem;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  width: max-content;
+}
+.projectDescription .techStack > div {
+  border: 1px solid;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+}
+.socialIcons {
+  display: flex;
+  width: 50%;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 50px;
+}
+.socialIcons > div {
+  border: 3px solid;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.socialIcons > div:nth-child(1) {
+  transform: skew(2deg);
+  transition: 0.8s ease-in-out;
+}
+.socialIcons > div:nth-child(2) {
+  transform: skew(2deg);
+  transition: 0.8s ease-in-out;
+}
+.socialIcons > div:nth-child(3) {
+  transform: skew(2deg);
+  transition: 0.8s ease-in-out;
+}
+.socialIcons > div:hover:nth-child(1) {
+  transform: skew(0);
+  color: #fff;
+  background-color: lightslategray;
+}
+.socialIcons > div:hover:nth-child(2) {
+  transform: skew(0);
+  color: #fff;
+  background-color: rgb(172, 215, 233);
+}
+.socialIcons > div:hover:nth-child(3) {
+  transform: skew(0);
+  color: #fff;
+  background-color: rgb(220, 238, 244);
 }
