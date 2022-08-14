@@ -1,45 +1,45 @@
 .App {
   text-align: center;
 }
-.scrollSnapMain {
-  height: 100%;
-  width: 100%;
-  overflow: scroll;
-  scroll-snap-type: y mandatory;
-}
-.scrollSnapChild {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 40px;
-  scroll-snap-align: center;
-  height: 100vh;
-  width: 100vw;
-  /* border:1px solid white */
-}
 .skillsPage {
+  height: 100vh;
+  /* background-color: whitesmoke; */
+  overflow: auto;
+}
+.skillsPage .insideSkills {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
-  border: 1px solid green;
+  height: 80vh;
+  width: 80vw;
+  box-sizing: border-box;
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10%;
+  padding: 2rem;
+  /* border:1px solid; */
+  margin: 1rem auto;
 }
-/* .skillsPage .skillsSlider {
-  position: absolute;
-  width: 300%;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  animation: slider 10s infinite linear;
-} */
 
-/* .slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-} */
+.skillsPage .insideSkills div {
+  border: 3px solid gray;
+  display: flex;
+  max-height: 60px;
+  max-width: 60px;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  font-size: 50px;
+  color: black;
+  border-radius: 1rem;
+  margin: auto;
+}
+.skillsPage .insideSkills div:hover {
+  transition: 3s ease-in-out;
+  transform: rotate(360deg);
+  transform-style: preserve-3d;
+}
 @keyframes slider {
   0%,
   25%,
@@ -75,42 +75,95 @@
     margin-top: 10px;
   }
 }
-.container {
-  position: relative;
-  width: 100%;
-  max-width: 400px;
-  border:1px  solid white;
-}
 
-/* .image {
-  display: block;
-  width: 100%;
-  height: auto;
-} */
-
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: 0.3s ease;
-  background-color: red;
+.contactForm {
+  height: 100vh;
+  width: 100vw;
+  margin: auto;
+  text-align: center;
 }
-.contactForm{
-height: 100vh;
-width: 100vw;
-margin: auto;
-text-align: center;
-}
-.contactForm form{
+.contactForm form {
   width: 400px;
   margin: auto;
-  border:3px solid rgb(116, 115, 115);
+  border: 3px solid rgb(116, 115, 115);
   padding: 1rem;
   box-sizing: border-box;
   border-radius: 1rem;
+}
+/* //========== */
+.projectsPage {
+  overflow: hidden;
+}
+.projectsPage .main {
+  margin: auto;
+  width: 70%;
+}
+.projectsPage .carousals {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+
+.projectsPage .projectDescription {
+  margin: 1rem;
+  text-align: center;
+}
+.projectDescription .techStack {
+  display: flex;
+  font-size: 2rem;
+  margin: 2rem;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  width: max-content;
+}
+.projectDescription .techStack > div {
+  border: 1px solid;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+}
+.socialIcons {
+  display: flex;
+  width: 50%;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 50px;
+}
+.socialIcons > div {
+  border: 3px solid;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.socialIcons > div:nth-child(1) {
+  transform: skew(2deg);
+  transition: 0.8s ease-in-out;
+}
+.socialIcons > div:nth-child(2) {
+  transform: skew(2deg);
+  transition: 0.8s ease-in-out;
+}
+.socialIcons > div:nth-child(3) {
+  transform: skew(2deg);
+  transition: 0.8s ease-in-out;
+}
+.socialIcons > div:hover:nth-child(1) {
+  transform: skew(0);
+  color: #fff;
+  background-color: lightslategray;
+}
+.socialIcons > div:hover:nth-child(2) {
+  transform: skew(0);
+  color: #fff;
+  background-color: rgb(172, 215, 233);
+}
+.socialIcons > div:hover:nth-child(3) {
+  transform: skew(0);
+  color: #fff;
+  background-color: rgb(220, 238, 244);
 }

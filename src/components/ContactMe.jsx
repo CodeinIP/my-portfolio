@@ -9,18 +9,18 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import "../App.css";
+import Social from "./Social";
 const ContactMe = () => {
   const [form, setForm] = useState({
     name: "",
     email: "",
-    // mobile: "",
     subject: "",
     message: "",
   });
   const [status, setStatus] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-const toast = useToast();
+  const toast = useToast();
   const sendEmail = (e) => {
     e.preventDefault();
     setLoading(true);
@@ -31,6 +31,7 @@ const toast = useToast();
           console.log("SUCCESS!", response.status, response.text);
           setLoading(false);
           setStatus(true);
+          setForm({ name: "", email: "", subject: "", message: "" });
           toast({
             title: "Email send successful.",
             status: "success",
@@ -69,6 +70,7 @@ const toast = useToast();
             value={form.name}
             onChange={handleInput}
             required
+            placeholder="Your name here."
           />
           <FormLabel>Enter name</FormLabel>
         </FormControl>
@@ -79,6 +81,7 @@ const toast = useToast();
             value={form.email}
             onChange={handleInput}
             required
+            placeholder="Your email ."
           />
           <FormLabel>Enter email</FormLabel>
         </FormControl>
@@ -88,6 +91,7 @@ const toast = useToast();
             value={form.subject}
             onChange={handleInput}
             name="subject"
+            placeholder="Your query."
           />
           <FormLabel>Message Title</FormLabel>
         </FormControl>
@@ -103,11 +107,12 @@ const toast = useToast();
           <FormLabel>Message description</FormLabel>
         </FormControl>
         <div style={{ textAlign: "right" }}>
-          <Button type="submit" isLoading={loading}>
+          <Button type="submit" isLoading={loading} colorScheme="messenger">
             Contact
           </Button>
         </div>
       </form>
+      <Social />
     </div>
   );
 };

@@ -4,17 +4,18 @@ import {
   Circle,
   Heading,
   Image,
+  Show,
   Stack,
   Text,
   useBreakpointValue,
   useColorMode,
   useMediaQuery,
 } from "@chakra-ui/react";
-import Snowfall from "react-snowfall";
 import "../App.css";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import profile from "../components/images/Profilee.png";
+import { Link } from "react-router-dom";
 const Home = () => {
   const { colorMode } = useColorMode();
   const isDark = colorMode === "dark";
@@ -27,8 +28,7 @@ const Home = () => {
     xl: "row",
   });
   return (
-    <div id="homePage">
-      <Snowfall snowflakeCount={10} radius={[0.5, 1.0]} color="#f5f5f5" />
+    <div id="aboutPage">
       <div>
         <Circle
           position="absolute"
@@ -74,27 +74,27 @@ const Home = () => {
               </div>
             </div>
             <Text color={isDark ? "gray.200" : "gray.500"}></Text>
-            <Button
-              mt={8}
-              colorScheme="blue"
-              onClick={() => navigate("/resume")}
-            >
-              Resume
+            <Button mt={8} colorScheme="blue">
+              <Link to="/files/resume.pdf" target="_blank" download>
+                Resume
+              </Link>
             </Button>
           </Box>
-          <Box flex="1">
-            <Image
-              alignSelf="center"
-              mt={isNotSmallerScreen ? "0" : "12"}
-              mb={isNotSmallerScreen ? "0" : "12"}
-              borderRadius="full"
-              backgroundColor="transparent"
-              boxShadow="lg"
-              boxSize="300px"
-              src={profile}
-              zIndex="1"
-            />
-          </Box>
+          <Show above="sm">
+            <Box flex="1">
+              <Image
+                alignSelf="center"
+                mt={isNotSmallerScreen ? "0" : "12"}
+                mb={isNotSmallerScreen ? "0" : "12"}
+                borderRadius="full"
+                backgroundColor="transparent"
+                boxShadow="lg"
+                boxSize="300px"
+                src={profile}
+                zIndex="1"
+              />
+            </Box>
+          </Show>
         </Box>
       </div>
     </div>
