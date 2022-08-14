@@ -7,23 +7,25 @@ import { SiChakraui } from "react-icons/si";
 const Skills = () => {
   return (
     <div id="skillsPage" className="skillsPage">
-      <div>
-        <AiFillHtml5 color="orange"  />
-      </div>
-      <div>
-        <DiCss3 color="lightblue" />
-      </div>
-      <div>
-        <DiJavascript1 color="orangered" />
-      </div>
-      <div>
-        <DiReact color="skyblue" />
-      </div>
-      <div>
-        <SiRedux color="#764abc" />
-      </div>
-      <div>
-        <SiChakraui color="#6fcad0" />
+      <div className="insideSkills">
+        <div>
+          <AiFillHtml5 color="orange" />
+        </div>
+        <div>
+          <DiCss3 color="lightblue" />
+        </div>
+        <div>
+          <DiJavascript1 color="orangered" />
+        </div>
+        <div>
+          <DiReact color="skyblue" />
+        </div>
+        <div>
+          <SiRedux color="#764abc" />
+        </div>
+        <div>
+          <SiChakraui color="#6fcad0" />
+        </div>
       </div>
     </div>
   );

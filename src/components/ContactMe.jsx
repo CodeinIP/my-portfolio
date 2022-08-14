@@ -9,6 +9,7 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import "../App.css";
+import Social from "./Social";
 const ContactMe = () => {
   const [form, setForm] = useState({
     name: "",
@@ -69,6 +70,7 @@ const ContactMe = () => {
             value={form.name}
             onChange={handleInput}
             required
+            placeholder="Your name here."
           />
           <FormLabel>Enter name</FormLabel>
         </FormControl>
@@ -79,6 +81,7 @@ const ContactMe = () => {
             value={form.email}
             onChange={handleInput}
             required
+            placeholder="Your email ."
           />
           <FormLabel>Enter email</FormLabel>
         </FormControl>
@@ -88,6 +91,7 @@ const ContactMe = () => {
             value={form.subject}
             onChange={handleInput}
             name="subject"
+            placeholder="Your query."
           />
           <FormLabel>Message Title</FormLabel>
         </FormControl>
@@ -103,11 +107,12 @@ const ContactMe = () => {
           <FormLabel>Message description</FormLabel>
         </FormControl>
         <div style={{ textAlign: "right" }}>
-          <Button type="submit" isLoading={loading}>
+          <Button type="submit" isLoading={loading} colorScheme="messenger">
             Contact
           </Button>
         </div>
       </form>
+      <Social />
     </div>
   );
 };

@@ -8,18 +8,10 @@ import Skills from "../pages/Skills";
 const Allroutes = () => {
   return (
     <>
-      <div>
-        <Home />
-      </div>
-      <div className="scrollSnapChild">
-        <Skills />
-      </div>
-      <div className="scrollSnapChild">
-        <Projects />
-      </div>
-      <div className="scrollSnapChild">
-        <ContactMe />
-      </div>
+      <Home />
+      <Skills />
+      <Projects />
+      <ContactMe />
     </>
   );
 };
