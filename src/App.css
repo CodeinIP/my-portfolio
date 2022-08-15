@@ -25,8 +25,8 @@
 .skillsPage .insideSkills div {
   border: 3px solid gray;
   display: flex;
-  max-height: 60px;
-  max-width: 60px;
+  height: 80px;
+  width: 80px;
   align-items: center;
   justify-content: center;
   background-color: white;
@@ -34,11 +34,35 @@
   color: black;
   border-radius: 1rem;
   margin: auto;
+  padding:.5rem;
 }
 .skillsPage .insideSkills div:hover {
-  transition: 3s ease-in-out;
-  transform: rotate(360deg);
-  transform-style: preserve-3d;
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+
+  /* When the animation is finished, start again */
+  animation-iteration-count: 1;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.skillsPage .insideSkills div:hover::before{
+  content:attr(data-content);
+  color: black;
+  font-size: 15px;
+  text-overflow: clip;
 }
 @keyframes slider {
   0%,
@@ -128,16 +152,18 @@
 }
 .socialIcons {
   display: flex;
-  width: 50%;
+  width: 80%;
   margin: auto;
   justify-content: space-between;
   align-items: center;
   font-size: 50px;
+  margin: auto;
 }
 .socialIcons > div {
   border: 3px solid;
   border-radius: 50%;
   padding: 10px;
+  margin: 5px;
 }
 
 .socialIcons > div:nth-child(1) {
@@ -151,6 +177,11 @@
 .socialIcons > div:nth-child(3) {
   transform: skew(2deg);
   transition: 0.8s ease-in-out;
+}
+.socialIcons > div:nth-child(4) {
+  transform: skew(2deg);
+  transition: 0.8s ease-in-out;
+  position: relative;
 }
 .socialIcons > div:hover:nth-child(1) {
   transform: skew(0);
@@ -167,3 +198,23 @@
   color: #fff;
   background-color: rgb(220, 238, 244);
 }
+.socialIcons > div:hover:nth-child(4) {
+  transform: skew(0);
+  color: #fff;
+  background-color: rgb(152, 247, 165);
+}
+.socialIcons>div:nth-child(4) .mobile{
+display: none;
+}
+.socialIcons>div:nth-child(4):hover .mobile{
+display: block;
+position: absolute;
+width: 150px;
+top:-30%;
+right: 30%;
+font-size: 15px;
+font-weight: bold;
+z-index: 1;
+color: black;
+}
+

@@ -8,22 +8,22 @@ const Skills = () => {
   return (
     <div id="skillsPage" className="skillsPage">
       <div className="insideSkills">
-        <div>
+        <div data-content="HTML" >
           <AiFillHtml5 color="orange" />
         </div>
-        <div>
+        <div data-content="CSS" >
           <DiCss3 color="lightblue" />
         </div>
-        <div>
+        <div data-content="JS" >
           <DiJavascript1 color="orangered" />
         </div>
-        <div>
+        <div data-content="REACT" >
           <DiReact color="skyblue" />
         </div>
-        <div>
+        <div data-content="REDUX" >
           <SiRedux color="#764abc" />
         </div>
-        <div>
+        <div data-content="CHAKRA" >
           <SiChakraui color="#6fcad0" />
         </div>
       </div>

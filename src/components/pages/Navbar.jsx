@@ -73,6 +73,7 @@ function Navbar() {
               icon={<GiHamburgerMenu />}
               variant="outline"
               bgColor="white"
+              color="black"
             />
             <MenuList>
               <MenuItem>

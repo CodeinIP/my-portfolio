@@ -1,6 +1,11 @@
 import React from "react";
 import "../App.css";
-import { AiFillInstagram, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import {
+  AiFillInstagram,
+  AiFillGithub,
+  AiFillLinkedin,
+  AiOutlineWhatsApp,
+} from "react-icons/ai";
 import { Heading } from "@chakra-ui/react";
 const Social = () => {
   return (
@@ -33,6 +38,10 @@ const Social = () => {
           >
             <AiFillLinkedin color="#0971f1" />
           </a>
+        </div>
+        <div>
+          <AiOutlineWhatsApp color="green" />
+          <div className="mobile">+91-82193-19272</div>
         </div>
       </div>
       <div>
