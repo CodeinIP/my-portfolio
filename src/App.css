@@ -1,6 +1,10 @@
 .App {
   text-align: center;
 }
+body{
+  width: 100vw;
+  scroll-behavior: none;
+}
 .skillsPage {
   height: 100vh;
   /* background-color: whitesmoke; */
@@ -93,6 +97,7 @@
 }
 @keyframes anim {
   to {
+    
     margin-top: -50px;
   }
   from {
@@ -107,7 +112,7 @@
   text-align: center;
 }
 .contactForm form {
-  width: 400px;
+  width: 70%;
   margin: auto;
   border: 3px solid rgb(116, 115, 115);
   padding: 1rem;
@@ -119,8 +124,8 @@
   overflow: hidden;
 }
 .projectsPage .main {
-  margin: auto;
   width: 70%;
+  margin: auto;
 }
 .projectsPage .carousals {
   display: flex;
@@ -152,11 +157,11 @@
 }
 .socialIcons {
   display: flex;
-  width: 80%;
+  width: 70%;
   margin: auto;
   justify-content: space-between;
   align-items: center;
-  font-size: 50px;
+  font-size: 30px;
   margin: auto;
 }
 .socialIcons > div {
