@@ -2,6 +2,8 @@ import React from "react";
 import "../../App.css";
 import { AiFillHtml5 } from "react-icons/ai";
 import { DiCss3, DiJavascript1, DiReact } from "react-icons/di";
+import {FaNodeJs} from "react-icons/fa";
+import {SiMongodb} from "react-icons/si"
 import { SiRedux } from "react-icons/si";
 import { SiChakraui } from "react-icons/si";
 const Skills = () => {
@@ -25,6 +27,12 @@ const Skills = () => {
         </div>
         <div data-content="CHAKRA" >
           <SiChakraui color="#6fcad0" />
+        </div>
+        <div data-content="NODEJS" >
+          <FaNodeJs color="lightgreen" />
+        </div>
+        <div data-content="mongoDB" >
+          <SiMongodb color="green" />
         </div>
       </div>
     </div>

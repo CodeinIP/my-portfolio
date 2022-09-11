@@ -17,7 +17,7 @@ const Social = () => {
       </div>
       <div className="socialIcons">
         <div>
-          <a href="https://github.com/CodeinIP" target="_blank" rel="noopener">
+          <a href="https://github.com/Inder-Pal-github" target="_blank" rel="noopener">
             <AiFillGithub color="black" />
           </a>
         </div>

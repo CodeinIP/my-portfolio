@@ -53,7 +53,7 @@ function Navbar() {
       {/* <Spacer/> */}
 
       <Flex flex="1" justify="flex-end" align="center">
-        <a href="https://github.com/CodeinIP" target="_blank" rel="noopener" >
+        <a href="https://github.com/Inder-Pal-github" target="_blank" rel="noopener" >
           <IconButton m="1" icon={<FaGithub />} isRound="true" />
         </a>
         <a href="https://www.linkedin.com/in/inder231/" target="_blank" rel="noopener" >

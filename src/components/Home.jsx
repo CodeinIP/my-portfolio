@@ -14,7 +14,7 @@ import {
 import "../App.css";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import profile from "../components/images/Profilee.png";
+import profile from "../components/images/Profile.png";
 import { Link } from "react-router-dom";
 const Home = () => {
   const { colorMode } = useColorMode();
@@ -75,7 +75,7 @@ const Home = () => {
             </div>
             <Text color={isDark ? "gray.200" : "gray.500"}></Text>
             <Button mt={8} colorScheme="blue">
-              <Link to="/files/resume.pdf" target="_blank" download>
+              <Link to="/files/Inder Pal Resume.pdf" target="_blank" download>
                 Resume
               </Link>
             </Button>
